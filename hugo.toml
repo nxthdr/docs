@@ -1,0 +1,46 @@
+
+baseURL = "https://docs.nxthdr.dev/"
+title = "nxthdr"
+theme = "hextra"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.highlight]
+    noClasses = false
+
+
+[[menu.main]]
+  name = "Search"
+  weight = 1
+  [menu.main.params]
+    type = "search"
+
+[[menu.main]]
+  name = "GitHub"
+  weight = 2
+  url = "https://github.com/imfing/hextra-starter-template"
+  [menu.main.params]
+    icon = "github"
+
+[[menu.main]]
+  name = "Discord"
+  weight = 3
+  url = "https://discord.gg/KRsVs7jafg"
+  [menu.main.params]
+    icon = "discord"
+
+[params]
+  [params.navbar]
+    displayTitle = true
+    displayLogo = false
+
+  [params.footer]
+    displayCopyright = false
+    displayPoweredBy = false
+
+  [params.editURL]
+    enable = true
+    base = "https://github.com/nxthdr/docs/edit/main/content"
