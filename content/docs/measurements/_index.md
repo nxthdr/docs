@@ -1,7 +1,7 @@
 ---
 title: Measurements
 weight: 2
-prev: /docs/as215011/tools/
+prev: /docs/as215011/experiments/
 next: /docs/measurements/probes/
 ---
 

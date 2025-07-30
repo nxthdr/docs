@@ -1,7 +1,7 @@
 ---
 title: Platform Internals
 weight: 6
-prev: /docs/tools/mcp/
+prev: /docs/tools/provider/
 next: /docs/internals/infrastructure/
 ---
 

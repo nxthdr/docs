@@ -1,7 +1,7 @@
 ---
 title: Tools
 weight: 5
-prev: /docs/datasets/
+prev: /docs/datasets/guidelines/
 next: /docs/tools/python/
 ---
 
