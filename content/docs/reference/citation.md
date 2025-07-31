@@ -1,6 +1,7 @@
 ---
-title: How to cite us?
-weight: 2
+title: How to Cite Us?
+weight: 1
+prev: /docs/reference/
 ---
 
 All data collected and provided by **nxthdr** is in the public domain ([Open Data Commons Public Domain Dedication and License](https://opendatacommons.org/licenses/pddl/1-0/) and can be used freely for research, analysis, and development. To that extent, there is no formal requirement to cite **nxthdr** in your work we you solely rely on our data. However, for the sake of  academic integrity, transparency, and reproducibility, we encourage you to acknowledge the use of our platform and data in your research publications, presentations, and projects.

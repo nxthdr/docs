@@ -29,4 +29,4 @@ Each user is allocated `10,000` measurement credits per day, which are reset at 
 * 1 credit = 1 probe
 * This means you can send up to `10,000` probes per day across all your experiments.
 
-If you need more credits, please contact us via [Discord](https://discord.gg/KRsVs7jafg) or [email](mailto:admin@nxthdr.dev).
+If you need more credits, please [contact us](/docs/reference/contact).

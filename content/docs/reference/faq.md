@@ -17,7 +17,7 @@ Glad you asked! There are many ways to contribute to **nxthdr**:
 
 * **Probing Platform**: Check out our [measurement limitations](/docs/measurements/limitations/) to see how you can help improve the probing infrastructure.
 
-* **Peering Platform**: We're looking to expand our presence at IXPs. If you're affiliated with an IXP and would like to support us, please get in touch via [Discord](https://discord.gg/KRsVs7jafg) or [email](mailto:admin@nxthdr.dev).
+* **Peering Platform**: We're looking to expand our presence at IXPs. If you're affiliated with an IXP and would like to support us, please [contact us](/docs/reference/contact).
 
 You can also support the project by *spreading the word*, sharing your research using **nxthdr** data, and encouraging others to contribute. The more people use and contribute to **nxthdr**, the better it becomes for everyone.
 

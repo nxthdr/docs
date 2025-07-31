@@ -12,7 +12,7 @@ Indicate exactly which datasets you used, including any custom datasets you crea
 
 ### Acknowledge Limitations
 
-Describe any constraints, limitations, or potential biases in the measurement data. If you encounter issues or limitations with the platform, we encourage you to report them via [Discord](https://discord.gg/KRsVs7jafg) or by [email](mailto:admin@nxthdr.dev). Your feedback helps us improve the platform for everyone.
+Describe any constraints, limitations, or potential biases in the measurement data. If you encounter issues or limitations with the platform, we encourage you to [contact us](/docs/reference/contact). Your feedback helps us improve the platform for everyone.
 
 ### Share Your Research Artifacts
 
