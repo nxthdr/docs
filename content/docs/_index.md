@@ -8,14 +8,7 @@ next: /docs/as215011/
 
 All datasets are shared in the public domain, every tool and systems are open source, and the entire infrastructure is designed rapid experimentation and reproducibility.
 
-If you find something missing in the documentation, please open an  [issue](https://github.com/nxthdr/docs/issues) or mention it on our [Discord](https://discord.gg/KRsVs7jafg).
-
-## Getting Started
-
-{{< cards >}}
-  {{< card link="as215011" title="Our Network" icon="eye" >}}
-  {{< card link="probing" title="Active Measurements" icon="sparkles" >}}
-{{< /cards >}}
+If you find something missing in the documentation, please open an  [issue](https://github.com/nxthdr/docs/issues) or [contact us](/docs/reference/contact).
 
 ## Applications
 
