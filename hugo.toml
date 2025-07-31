@@ -37,6 +37,9 @@ theme = "hextra"
     displayTitle = true
     displayLogo = false
 
+  [params.navbar.logo]
+    link = "/docs/"
+
   [params.footer]
     displayCopyright = false
     displayPoweredBy = false
