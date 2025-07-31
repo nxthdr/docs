@@ -13,7 +13,7 @@ We plan to support IPv4 in the future by leveraging cloud providers’ IPv4 spac
 
 ### Limited Probing Locations
 
-Currently, we operate a small number of probing locations. Expanding coverage is straightforward—by deploying additional cloud instances and partnering with more providers.
+Currently, we operate a small number of probing locations. Expanding coverage is straightforward: by deploying additional cloud instances and partnering with more providers.
 
 If you can offer access to cloud instances, IXP-connected servers, or are willing to help us diversify infrastructure, we’d love to hear from you.
 
@@ -21,7 +21,7 @@ If you can offer access to cloud instances, IXP-connected servers, or are willin
 
 All probes are currently sent from our own Autonomous System: **AS215011**. This is by design, and helps maintain control over routing behavior during experiments.
 
-We may expand to include cloud-hosted vantage points under different ASes in the future—especially for IPv4 support—but we do **not** aim to compete with large-scale platforms like RIPE Atlas, which support probes from thousands of ASes. Instead, **nxthdr** focuses on offering controlled, customizable measurement capabilities.
+We may expand to include cloud-hosted vantage points under different ASes in the future—especially for IPv4 support—but we do *not* aim to compete with large-scale platforms like RIPE Atlas, which support probes from thousands of ASes. Instead, **nxthdr** focuses on offering controlled, customizable measurement capabilities.
 
 ### Short Data Retention
 

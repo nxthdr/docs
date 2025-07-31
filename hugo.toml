@@ -21,7 +21,7 @@ theme = "hextra"
 [[menu.main]]
   name = "GitHub"
   weight = 2
-  url = "https://github.com/imfing/hextra-starter-template"
+  url = "https://github.com/nxthdr/"
   [menu.main.params]
     icon = "github"
 
