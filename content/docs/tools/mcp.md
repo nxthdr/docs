@@ -1,6 +1,7 @@
 ---
 title: MCP Servers
 weight: 3
+next: /docs/internals/
 ---
 
 Since **nxthdr** datasets are stored in ClickHouse, you can use the official MCP server for ClickHouse [mcp-clickhouse](https://github.com/ClickHouse/mcp-clickhouse) to query the data.
