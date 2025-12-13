@@ -11,7 +11,7 @@ The data controller is currently the individual maintaining the **nxthdr** platf
 
 ### Authentication and Account Data
 
-We use [Logto](https://logto.io/) as our identity provider for user authentication and authorization. Logto servers used are based in the European Union and complies with the GDPR.
+We use [Auth0](https://auth0.com/) as our identity provider for user authentication and authorization. Logto servers used are based in the European Union and complies with the GDPR.
 
 When you log into **nxthdr**, Logto handles your account information (e.g. email, password) directly. We do **not** store or access your email, password, or any personally identifiable information.
 
