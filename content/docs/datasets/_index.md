@@ -108,7 +108,7 @@ curl -X POST "https://nxthdr.dev/api/query/" \
   count(*) as flow_records,
   sum(bytes * sampling_rate) as total_estimated_bytes
 FROM flows.records
-WHERE time_flow_start_ns >= now() - INTERVAL 1 DAY
+WHERE time_received_ns >= now() - INTERVAL 1 DAY
 GROUP BY dst_addr
 ORDER BY avg_bytes_per_second DESC
 LIMIT 10 FORMAT CSVWithNames"

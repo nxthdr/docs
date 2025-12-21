@@ -11,13 +11,13 @@ The data controller is currently the individual maintaining the **nxthdr** platf
 
 ### Authentication and Account Data
 
-We use [Auth0](https://auth0.com/) as our identity provider for user authentication and authorization. Logto servers used are based in the European Union and complies with the GDPR.
+We use [Auth0](https://auth0.com/) as our identity provider for user authentication and authorization. Auth0 servers used are based in the European Union and complies with the GDPR.
 
-When you log into **nxthdr**, Logto handles your account information (e.g. email, password) directly. We do **not** store or access your email, password, or any personally identifiable information.
+When you log into **nxthdr**, Auth0 handles your account information (e.g. email, password) directly. We do **not** store or access your email, password, or any personally identifiable information.
 
 ### What We Store
 
-In our infrastructure, we store only a hashed version of the client ID assigned to you by Logto. This hashed ID is used internally to:
+In our infrastructure, we store only a hashed version of the client ID assigned to you by Auth0. This hashed ID is used internally to:
 
 * Track measurement activity (e.g. probes sent, experiments conducted)
 * Manage credit usage and enforce platform limits
@@ -26,7 +26,7 @@ This identifier is not linked to any personal information such as your name or e
 
 ### Cookies
 
-Logto may use cookies to manage authentication sessions. **nxthdr** itself does not use cookies for tracking or profiling purposes.
+Auth0 may use cookies to manage authentication sessions. **nxthdr** itself does not use cookies for tracking or profiling purposes.
 
 ### Data Access, Correction, and Deletion
 
