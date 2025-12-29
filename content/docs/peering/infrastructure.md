@@ -19,11 +19,10 @@ This prefix is used for interconnection and experimentation with other networks.
 
 ```
 FogIXP – Frankfurt
+FranceIX - Paris
 LOCIX  – Frankfurt
 NL-ix  – Amsterdam
 ```
-
-> We gratefully acknowledge the support of individuals affiliated with the [CNRS](https://www.cnrs.fr/en) for facilitating access to servers at the NL-ix IXP in Amsterdam.
 
 ## Probing Servers
 
@@ -44,7 +43,7 @@ If you operate your own Autonomous System and want to peer with AS215011 as anot
 
 **Direct IXP Peering**
 
-If you have presence at one of our IXP locations (FogIXP, LOCIX, or NL-ix), you can establish a direct BGP session over the IXP fabric. [Contact us](/docs/reference/contact/) with your IXP details to coordinate the peering session.
+If you have presence at one of our IXP locations, you can establish a direct BGP session over the IXP fabric. [Contact us](/docs/reference/contact/) with your IXP details to coordinate the peering session.
 
 **Remote Peering via Tunnel**
 

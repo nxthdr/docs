@@ -1,6 +1,6 @@
-# nxthdr.dev
+# Documentation
 
-This is the source code of [https://docs.nxthdr.dev](https://docs.nxthdr.dev).
+This is the source code of the documentation at [https://docs.nxthdr.dev](https://docs.nxthdr.dev).
 
 
 ## Development
