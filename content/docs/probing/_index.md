@@ -5,7 +5,7 @@ prev: /docs/peering/getting-started/
 next: /docs/probing/probes/
 ---
 
-**Saimiris** is the **nxthdr** probing platform that enables researchers, students, and network operators to conduct active Internet measurements from multiple global vantage points using production infrastructure.
+**Saimiris** is the nxthdr probing platform that enables researchers, students, and network operators to conduct active Internet measurements from multiple global vantage points using production infrastructure.
 
 To get started quickly, check out our [interactive tutorial](https://nxthdr.dev/docs/probing) and send your first probes directly from our network.
 

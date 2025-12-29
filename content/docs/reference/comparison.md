@@ -3,37 +3,37 @@ title: Platforms Comparison
 weight: 3
 ---
 
-This section compares **nxthdr** with other popular platforms for Internet research. nxthdr provides two integrated platforms: **Saimiris** for active measurements and **PeerLab** for BGP and routing experiments. The comparison focuses on key features, data access, and capabilities to help you choose the right platform for your research needs.
+This section compares **nxthdr** with other popular platforms for Internet research. nxthdr provides two integrated platforms: Saimiris for active measurements and PeerLab for BGP and routing experiments. The comparison focuses on key features, data access, and capabilities to help you choose the right platform for your research needs.
 
 Please note that information about other platforms is based on publicly available documentation and may not reflect the latest changes. Always refer to the official documentation of each platform for the most accurate and up-to-date information. Feel free to [open an issue](https://github.com/nxthdr/docs/issues) if you find any discrepancies or have questions.
 
 ## What Makes nxthdr Unique
 
-**nxthdr** is the only platform that integrates both active measurements and BGP experimentation in a single, cohesive environment:
+nxthdr is the only platform that integrates both active measurements and BGP experimentation in a single, cohesive environment:
 
 ### Integrated Platform Advantage
 
-Unlike other platforms that focus on either measurements OR BGP experiments, nxthdr provides **both Saimiris (probing) and PeerLab (peering)** under one roof. This integration enables:
+Unlike other platforms that focus on either measurements OR BGP experiments, nxthdr provides both Saimiris (probing) and PeerLab (peering) under one roof. This integration enables:
 
 * **Joint control and data plane studies**: Announce your own prefixes via PeerLab and immediately measure how routing changes affect reachability and latency using Saimiris
 * **End-to-end routing research**: Study the complete picture from BGP announcements to actual packet delivery
-* **Unified data access**: All BGP data, traffic data, and measurement results available in one place under PDDL
+* **Unified data access**: All BGP data, traffic data, and measurement results available in one place under [PDDL](https://opendatacommons.org/licenses/pddl/1-0/)
 * **Seamless workflows**: No need to coordinate between separate platforms or merge datasets from different sources
 
 ### Platform-Specific Advantages
 
-**Saimiris (Probing Platform)**
+Saimiris (Probing Platform)
 * Anycast measurement support (unique capability)
 * Full control over probe parameters and source addressing
 * Framework for measurement tool development
 
-**PeerLab (Peering Platform)**
+PeerLab (Peering Platform)
 * Lease dedicated IPv6 prefixes
 * Automated Docker-based setup
 * Real BGP experiments on production Internet
 
-**Both Platforms**
-* Truly open data with no authentication, delays, or licensing restrictions (PDDL)
+Both Platforms
+* Truly open data with no authentication, delays, or licensing restrictions ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/))
 * No application or approval process required
 * Immediate access to both platforms
 
@@ -53,7 +53,7 @@ This section compares PeerLab with the PEERING testbed, the leading platform for
 | **Setup complexity**                    | Manual BGP configuration required                                       | Automated via Docker (PeerLab)   |
 | **BGP data access**               | Limited; primarily for your own announcements                                         | Full BGP feeds and traffic data (sFlow) from AS215011           |
 | **Integrated measurements**       | No (separate platform needed)                                          | Yes (combined with Saimiris)  |
-| **Data licensing**       | Varies by use; research-focused                                          | Public domain (PDDL)  |
+| **Data licensing**       | Varies by use; research-focused                                          | Public domain ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/))  |
 | **IPv4/IPv6 support**       | Both IPv4 and IPv6                                          | IPv6 only (currently)  |
 
 ### Advantages Summary
@@ -71,7 +71,7 @@ This section compares PeerLab with the PEERING testbed, the leading platform for
 * Automated setup via Docker, Headscale and BIRD for quick experimentation
 * Full BGP and traffic data from AS215011 made publicly available
 * Integrated with Saimiris for joint peering and measurement studies
-* Truly open data with no licensing restrictions (PDDL)
+* Truly open data with no licensing restrictions ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/))
 
 ## Probing Platform Comparison
 
@@ -94,7 +94,7 @@ This section compares PeerLab with the PEERING testbed, the leading platform for
 | Feature                          | CAIDA Ark                                  | RIPE Atlas                              | M‑Lab                                       | nxthdr                              |
 | -------------------------------- | ------------------------------------------ | --------------------------------------- | ------------------------------------------- | ----------------------------------- |
 | **Data access** | Public datasets; raw data requires request; delayed availability | Public API; private data with auth      | Public via BigQuery (requires GCP account)   | Direct ClickHouse access, no authentication |
-| **Data licensing**               | Academic, non-commercial use only              | Open access under RIPE NCC terms        | Public domain (CC0)   | Public domain (PDDL) |
+| **Data licensing**               | Academic, non-commercial use only              | Open access under RIPE NCC terms        | Public domain (CC0)   | Public domain ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/)) |
 | **Data retention**               | Long-term archives; curated datasets       | Private data ~1 month; public archives | Indefinite retention; 24h publication delay | 7 days (rolling window) |
 | **BGP data**               | Yes (RouteViews, BGPStream)       | Limited | No | Yes (full BGP feeds from AS215011) |
 | **Traffic data**               | No       | No | Yes (NDT, speedtest) | Yes (sFlow from AS215011) |
@@ -143,7 +143,7 @@ PKTLAB is a measurement framework (not a platform) that can be compared with Sai
 * No application required: immediate access for anyone
 * Integration with BGP experiments (PeerLab) for joint studies
 * Full control over probe parameters and source addressing
-* Truly open data with no authentication or licensing restrictions (PDDL)
+* Truly open data with no authentication or licensing restrictions ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/))
 * All measurement data publicly available
 
 ## Sources

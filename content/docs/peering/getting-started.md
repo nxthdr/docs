@@ -5,7 +5,7 @@ prev: /docs/peering/infrastructure/
 next: /docs/probing/
 ---
 
-This guide will help you start using the **PeerLab** peering platform to conduct BGP and routing experiments.
+This guide will help you start using the PeerLab peering platform to conduct BGP and routing experiments.
 
 ## Prerequisites
 

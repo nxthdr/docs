@@ -5,25 +5,25 @@ weight: 6
 
 This is a strong and thoughtful section that communicates your values and policies clearly. Below is a refined version that improves grammar, clarity, and consistency in tone while preserving your message and openness:
 
-### What Problems Does **nxthdr** Solve?
+### What Problems Does nxthdr Solve?
 
-In short, **nxthdr** is an open platform for Internet measurement research, with a focus on active measurements, passive BGP data collection, and network analysis tooling. It’s designed to be accessible to everyone, with no restrictions on data access or usage.
+In short, nxthdr is an open platform for Internet measurement research, with a focus on active measurements, passive BGP data collection, and network analysis tooling. It’s designed to be accessible to everyone, with no restrictions on data access or usage.
 
 All data collected is released into the public domain, and all tools and systems are open source.
 
 ### How Can I Help?
 
-Glad you asked! There are many ways to contribute to **nxthdr**:
+Glad you asked! There are many ways to contribute to nxthdr:
 
 * **Saimiris**: Check out our [measurement limitations](/docs/probing/limitations/) to see how you can help improve the probing infrastructure.
 
 * **Peering Platform**: We're looking to expand our presence at IXPs. If you're affiliated with an IXP and would like to support us, please [contact us](/docs/reference/contact).
 
-You can also support the project by *spreading the word*, sharing your research using **nxthdr** data, and encouraging others to contribute. The more people use and contribute to **nxthdr**, the better it becomes for everyone.
+You can also support the project by *spreading the word*, sharing your research using nxthdr data, and encouraging others to contribute. The more people use and contribute to nxthdr, the better it becomes for everyone.
 
 ### Can Someone Scoop My Results?
 
-A core principle of **nxthdr** is to make all collected data immediately available to everyone, without delay, restriction, or authentication. This means that when you send probes, the resulting replies are visible to anyone in real time.
+A core principle of nxthdr is to make all collected data immediately available to everyone, without delay, restriction, or authentication. This means that when you send probes, the resulting replies are visible to anyone in real time.
 
 However, your measurements are anonymous:
 

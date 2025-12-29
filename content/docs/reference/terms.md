@@ -3,7 +3,7 @@ title: Terms of Service
 weight: 4
 ---
 
-By using the **nxthdr** platforms (PeerLab and Saimiris), you agree to comply with these Terms of Service. Violations may result in suspension or termination of your access.
+By using the nxthdr platforms (PeerLab and Saimiris), you agree to comply with these Terms of Service. Violations may result in suspension or termination of your access.
 
 ## General Terms
 
