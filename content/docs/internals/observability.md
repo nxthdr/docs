@@ -1,6 +1,6 @@
 ---
-title: Monitoring & Observability
-weight: 4
+title: Observability
+weight: 5
 prev: /docs/internals/storage
 next: /docs/reference/
 ---

@@ -40,6 +40,6 @@ Currently, there is no redundancy for the core server, but regular backups of se
 
 ### IPv4 Proxy
 
-The current limitation of **as215011** is that it is IPv6-only. To address this, we use an "IPv4 proxy server", a [Scaleway](https://www.scaleway.com/en/) cloud instance with a public IPv4 address. This server proxies IPv4 traffic to the IPv6-only core server through a [Caddy](https://caddyserver.com/) reverse proxy.
+The current limitation of **as215011** is that it is IPv6-only. To address this, we use a dedicated IPv4 proxy that uses the IPv4 address of the core server. This [Caddy](https://caddyserver.com/) proxy forwards IPv4 traffic to the IPv6-only proxy through a reverse proxy configuration, and maintains TLS configuration.
 
 All **nxthdr** domains have both A and AAAA records: the A records point to the IPv4 proxy service, and the AAAA records point to the core services directly.

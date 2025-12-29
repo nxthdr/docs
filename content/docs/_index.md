@@ -1,7 +1,7 @@
 ---
 title: Documentation
 weight: 1
-next: /docs/as215011/
+next: /docs/peering/
 ---
 
 [nxthdr](https://nxthdr.dev) operates a global network infrastructure designed specifically for Internet research and education. Our platform offers flexible worldwide active measurements from our own autonomous system and peering capabilities through multiple Internet exchanges.
@@ -12,22 +12,26 @@ If you find something missing in the documentation, please open an  [issue](http
 
 ## Applications
 
+**BGP & Routing Experiments**
+
+Peer with our IXP servers, lease public IPv6 prefixes, and announce them to the real Internet. Conduct hands-on experiments with BGP policies, traffic engineering, and routing dynamics in production networks.
+
 **Internet Topology & Performance Research**
 
-Analyze BGP dynamics, CDN behavior, routing patterns, and global connectivity using comprehensive real-world measurement data.
+Perform active measurements from multiple global locations and analyze BGP dynamics, CDN behavior, routing patterns, and global connectivity using comprehensive real-world data collected with Saimiris.
+
+**Joint Peering & Probing Studies**
+
+Combine active measurements with your own announced prefixes to conduct unique experiments impossible on other platforms. Study how routing changes affect reachability, latency, and path selection in real-time.
 
 **Measurement Tooling & Algorithm Development**
 
-Build, test, and benchmark innovative measurement techniques and algorithms leveraging our global high-speed infrastructure.
-
-**Data Science & Ethics Research**
-
-Explore best practices in large-scale data collection, privacy-preserving techniques, ethical measurement design, and advanced visualization methods.
-
-**Reproducible Research**
-
-Validate and reproduce prior studies with access to consistent, open datasets and standardized measurement infrastructure.
+Build, test, and benchmark innovative measurement techniques and algorithms leveraging our global high-speed infrastructure with full control over source addressing.
 
 **Education & Learning**
 
-Enhance networking courses, workshops, and hands-on learning experiences with real Internet data and measurement capabilities.
+Teach networking courses with real Internet resources. Students can peer with actual IXPs, announce real prefixes, and perform measurements on production networks.
+
+**Reproducible Research**
+
+Validate and reproduce prior studies with access to consistent, open datasets and standardized measurement infrastructure across both passive BGP monitoring and active probing.

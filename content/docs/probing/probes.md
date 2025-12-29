@@ -1,7 +1,7 @@
 ---
 title: Probes Definition
 weight: 1
-prev: /docs/measurements/
+prev: /docs/probing/
 ---
 
 Measurements are performed by servers called *agents* (also known as *vantage points*) deployed at various locations around the world. These *agents* send network packets called *probes* to the Internet and listen for *replies*. Probes can use different transport protocols, such as ICMP, UDP, or TCP. Unlike UDP and TCP, which include source and destination port fields, ICMP does not use ports.

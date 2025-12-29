@@ -1,6 +1,6 @@
 ---
 title: FAQ
-weight: 5
+weight: 6
 ---
 
 This is a strong and thoughtful section that communicates your values and policies clearly. Below is a refined version that improves grammar, clarity, and consistency in tone while preserving your message and openness:
@@ -15,7 +15,7 @@ All data collected is released into the public domain, and all tools and systems
 
 Glad you asked! There are many ways to contribute to **nxthdr**:
 
-* **Probing Platform**: Check out our [measurement limitations](/docs/measurements/limitations/) to see how you can help improve the probing infrastructure.
+* **Saimiris**: Check out our [measurement limitations](/docs/probing/limitations/) to see how you can help improve the probing infrastructure.
 
 * **Peering Platform**: We're looking to expand our presence at IXPs. If you're affiliated with an IXP and would like to support us, please [contact us](/docs/reference/contact).
 

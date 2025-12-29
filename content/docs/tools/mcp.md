@@ -13,7 +13,7 @@ This provides a convenient way to access and analyze the datasets using natural 
 ```yaml
 {
     "servers": {
-        "mcp-clickhouse": {
+        "mcp-clickhouse-nxthdr": {
             "command": "uv",
             "args": [
                 "run",

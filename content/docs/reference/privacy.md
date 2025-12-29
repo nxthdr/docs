@@ -1,6 +1,6 @@
 ---
 title: Privacy
-weight: 4
+weight: 5
 ---
 
 We take privacy seriously and aim to minimize the amount of personal data we collect and store. If you have any questions or concerns about our privacy practices, please feel free to contact us at [admin@nxthdr.dev](mailto:admin@nxthdr.dev).

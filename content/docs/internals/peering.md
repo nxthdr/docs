@@ -1,5 +1,5 @@
 ---
-title: Measurement Platform
+title: Peering Platform
 weight: 3
 ---
 

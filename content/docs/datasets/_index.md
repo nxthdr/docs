@@ -1,7 +1,7 @@
 ---
 title: Datasets
 weight: 4
-prev: /docs/measurements/ethics/
+prev: /docs/probing/ethics/
 next: /docs/datasets/enrich/
 ---
 
