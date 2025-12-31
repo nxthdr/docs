@@ -1,5 +1,5 @@
 ---
-title: Probing Platform
+title: Probing
 weight: 2
 prev: /docs/peering/getting-started/
 next: /docs/probing/probes/

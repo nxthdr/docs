@@ -1,5 +1,5 @@
 ---
-title: Peering Platform
+title: Peering
 weight: 1
 prev: /docs/
 next: /docs/peering/infrastructure/
