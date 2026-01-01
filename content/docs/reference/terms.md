@@ -86,7 +86,7 @@ You may not host or distribute:
 
 Do not use your leased prefixes to:
 
-* Launch denial of service attacks (see also [Saimiris Terms](#saimiris-terms) for measurement-related restrictions)
+* Launch denial of service attacks (see also [Probing Platform Terms](#probing-platform-terms) for measurement-related restrictions)
 * Conduct network scanning or intrusion attempts against third parties
 * Operate command and control infrastructure for botnets
 * Engage in cryptocurrency mining
@@ -160,10 +160,6 @@ If you receive an abuse complaint about your measurements:
 * Document the nature of your research
 * [Contact us](/docs/reference/contact/) if you need assistance
 
-**Blocklists**
-
-We maintain blocklists of targets that have requested exclusion from measurements. These lists are automatically enforced. Attempting to circumvent blocklists will result in access suspension.
-
 ## Enforcement
 
 **Violation Response**
@@ -207,5 +203,3 @@ We may update these Terms of Service as the platforms evolve. Continued use of t
 ## Contact
 
 If you have questions about these terms or need to report violations, please [contact us](/docs/reference/contact/).
-
-Last updated: December 29, 2025

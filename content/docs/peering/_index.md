@@ -1,5 +1,5 @@
 ---
-title: Peering
+title: Peering Platform
 weight: 1
 prev: /docs/
 next: /docs/peering/infrastructure/
@@ -48,9 +48,3 @@ Announce your leased prefixes from multiple Internet Exchange Points across Euro
 **Monitor Your Announcements**
 
 All routing data from AS215011 is passively collected and made freely available. Monitor your own announcements, analyze routing behavior, and study BGP dynamics using our public [datasets](/docs/datasets/).
-
-## Network Infrastructure
-
-We operate [AS215011](https://www.peeringdb.com/net/36080), an IPv6-only research-focused Autonomous System designed specifically for routing experiments and active measurements.
-
-Learn more about our [network infrastructure](/docs/peering/infrastructure/) including IXP locations, routing policy, and how to peer with us as another network.

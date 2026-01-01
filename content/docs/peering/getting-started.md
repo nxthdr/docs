@@ -2,7 +2,7 @@
 title: Getting Started
 weight: 2
 prev: /docs/peering/infrastructure/
-next: /docs/probing/
+next: /docs/peering/security-compliance/
 ---
 
 This guide will help you start using the PeerLab peering platform to conduct BGP and routing experiments.
@@ -15,16 +15,14 @@ Before you begin, you should have:
 * Docker and Docker Compose installed on your system
 * An account on [nxthdr.dev](https://nxthdr.dev)
 
-**Note:** You do NOT need your own Autonomous System Number (ASN). We will assign you a private ASN (e.g., 64512) and you will be able to announce prefixes leased from our allocation.
+You do not need your own Autonomous System Number (ASN). We will assign you a private ASN (e.g., 64512) and you will be able to announce prefixes leased from our allocation.
 
 ## Step 1: Lease IPv6 Prefixes
 
-1. [Sign up](https://nxthdr.dev) for an account if you don't have one
-2. Navigate to the [peering dashboard](https://nxthdr.dev/peering)
-3. Request IPv6 prefix allocation (typically /48 or smaller)
-4. Wait for approval (usually within 24 hours)
+1. Navigate to the [peering dashboard](https://nxthdr.dev/peering)
+2. Request /48 IPv6 prefix allocation
 
-Once approved, your leased prefixes will be displayed on the dashboard and ready to announce.
+Your leased prefixes will be displayed on the dashboard and ready to announce.
 
 ## Step 2: Setup PeerLab
 
@@ -107,29 +105,6 @@ After a few moments, you should see BGP sessions in "Established" state.
 ## Monitor Your Announcements
 
 *Content coming soon...*
-
-## Security & Compliance
-
-When using PeerLab, you must follow these security requirements:
-
-**Route Announcements**
-
-You can only announce IPv6 prefixes that have been explicitly leased to you through the nxthdr.dev dashboard. Attempting to announce unauthorized prefixes will result in your announcements being filtered and your access being potentially suspended.
-
-**ASN Assignment**
-
-Each user is assigned a unique private ASN. You cannot use another user's ASN or modify your assigned ASN. This ensures proper isolation between users and prevents routing conflicts.
-
-**Hosted Content**
-
-Any content you host using your leased prefixes, even temporarily, must comply with our [terms of service](/docs/reference/terms/). This includes but is not limited to:
-
-* No malicious or harmful content
-* No copyright infringement
-* No spam or abuse
-* Compliance with applicable laws and regulations
-
-Violations of these requirements may result in immediate suspension of your access to PeerLab and revocation of your leased prefixes.
 
 ## Get Help
 

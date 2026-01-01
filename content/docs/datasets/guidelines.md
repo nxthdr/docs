@@ -4,7 +4,7 @@ weight: 3
 next: /docs/tools/
 ---
 
-When using **nxthdr** data in your research or presentations, please follow these guidelines to promote data integrity, transparency, and reproducibility.
+When using nxthdr data in your research or presentations, please follow these guidelines to promote data integrity, transparency, and reproducibility.
 
 ### Specify Datasets Clearly
 

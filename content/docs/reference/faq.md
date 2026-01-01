@@ -34,14 +34,14 @@ So while others may see your data, they won’t know it was you, nor will they k
 
 We believe this approach maximizes the reusability of data while minimizing the risk of being "scooped", since interpreting the data meaningfully requires context only you possess.
 
-### Do I Need to Add **nxthdr** Members as Authors in My Paper?
+### Do I Need to Add nxthdr Members as Authors in My Paper?
 
-Absolutely not. **nxthdr** is an open platform—you are free to use it without adding anyone as a co-author. All data is public domain.
+Absolutely not. nxthdr is an open platform—you are free to use it without adding anyone as a co-author. All data is public domain.
 
 However, we do encourage you to cite the platform in your work to help promote it and support further contributions. See [How to cite us](/docs/reference/citation/) for details.
 
 Also, please refer to our [Publication Guidelines](/docs/datasets/guidelines/) to ensure good practices in data usage, integrity, and reproducibility.
 
-The only time it makes sense to include an **nxthdr** member as a co-author is if you’ve actively collaborated with them. For example, on a custom dataset, experiment design, or joint analysis. In such cases, consider using [CRediT](https://credit.niso.org/) roles to clearly define each contributor’s involvement.
+The only time it makes sense to include an nxthdr member as a co-author is if you’ve actively collaborated with them. For example, on a custom dataset, experiment design, or joint analysis. In such cases, consider using [CRediT](https://credit.niso.org/) roles to clearly define each contributor’s involvement.
 
-And just to be clear: collaborating with one **nxthdr** member does not mean you need to include others who were not directly involved in your project.
+And just to be clear: collaborating with one nxthdr member does not mean you need to include others who were not directly involved in your project.

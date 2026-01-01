@@ -1,5 +1,5 @@
 ---
-title: Probing
+title: Probing Platform
 weight: 2
 prev: /docs/peering/getting-started/
 next: /docs/probing/probes/
@@ -69,18 +69,6 @@ All measurement results are stored in a ClickHouse database and made freely avai
 * Map Internet paths and detect anomalies
 
 They are called *active* because they intentionally generate traffic, unlike *passive* measurements, which analyze existing traffic flows without injecting new packets. Examples of passive measurements include monitoring BGP updates, RPKI state, or observing flow data on routers.
-
-## Ethics & Compliance
-
-When using Saimiris, you must conduct measurements responsibly and ethically. This includes:
-
-* No denial of service attacks or flooding
-* No network intrusion or unauthorized security testing
-* No espionage or surveillance activities
-* Respect for target networks and abuse complaints
-* Compliance with applicable laws and regulations
-
-For complete details on ethical measurement practices and prohibited activities, please review our [terms of service](/docs/reference/terms/).
 
 ## Credits
 

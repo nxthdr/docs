@@ -3,7 +3,7 @@ title: Privacy
 weight: 5
 ---
 
-We take privacy seriously and aim to minimize the amount of personal data we collect and store. If you have any questions or concerns about our privacy practices, please feel free to contact us at [admin@nxthdr.dev](mailto:admin@nxthdr.dev).
+We take privacy seriously and aim to minimize the amount of personal data we collect and store. If you have any questions or concerns about our privacy practices, please feel free to [contact us](/docs/reference/contact).
 
 ### Data Controller
 
@@ -19,27 +19,28 @@ When you log into **nxthdr**, Auth0 handles your account information (e.g. email
 
 In our infrastructure, we store only a hashed version of the client ID assigned to you by Auth0. This hashed ID is used internally to:
 
-* Track measurement activity (e.g. probes sent, experiments conducted)
+* Track measurement activity (probes sent, experiments conducted)
+* Manage peering resources (prefix leases, ASN assignments, BGP announcements)
 * Manage credit usage and enforce platform limits
 
 This identifier is not linked to any personal information such as your name or email on our servers.
 
 ### Cookies
 
-Auth0 may use cookies to manage authentication sessions. **nxthdr** itself does not use cookies for tracking or profiling purposes.
+Auth0 may use cookies to manage authentication sessions. nxthdr itself does not use cookies for tracking or profiling purposes.
 
 ### Data Access, Correction, and Deletion
 
 You have the right to:
 
-* Request access to the data associated with your account (i.e., your hashed client ID and usage history)
+* Request access to the data associated with your account
 * Request correction or deletion of your data at any time
 
-To do so, please contact us at [admin@nxthdr.dev](mailto:admin@nxthdr.dev).
+To do so, please [contact us](/docs/reference/contact/).
 
 ### Data Retention
 
-We retain usage-related data (e.g. measurements, credits) for as long as your account is active, or until you request deletion.
+We retain usage-related data (measurements, peering resources, credits) for as long as your account is active, or until you request deletion.
 
 ### Lawful Basis for Processing
 

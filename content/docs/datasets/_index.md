@@ -1,7 +1,7 @@
 ---
 title: Datasets
 weight: 4
-prev: /docs/probing/ethics/
+prev: /docs/probing/limitations/
 next: /docs/datasets/enrich/
 ---
 
@@ -89,7 +89,7 @@ LIMIT 5 FORMAT CSVWithNames"
 
 ### Traffic Dataset
 
-The traffic dataset is available in the `flows.records` table. Each router of as215011 sends sFlow messages to [goflow2](https://github.com/netsampler/goflow2), which records the flow samples in a ClickHouse database.
+The traffic dataset is available in the `flows.records` table. Each router of as215011 sends sFlow messages to [pesto](https://github.com/nxthdr/pesto), which records the flow samples in a ClickHouse database.
 
 Each row represents a sampled network flow, capturing traffic statistics between source and destination endpoints. This dataset is more useful for internal troubleshooting, but is public for transparency and possible research use cases.
 

@@ -30,4 +30,4 @@ If you want to explicitly encode the agent identity in your probe source address
 * **Embed agent ID bits** into your `/80` address allocation
 * **Use another field**, such as the source port, to carry this metadata
 
-The choice is yours, **nxthdr** gives you full control over probe construction and addressing.
+The choice is yours, nxthdr gives you full control over probe construction and addressing.
