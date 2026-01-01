@@ -1,7 +1,7 @@
 ---
 title: Reference
 weight: 7
-prev: /docs/internals/monitoring/
+prev: /docs/internals/observability/
 next: /docs/reference/citation/
 ---
 
