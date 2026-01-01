@@ -7,7 +7,7 @@ next: /docs/probing/
 
 While PeerLab provides a powerful platform for peering experiments and IPv6 connectivity, there are some current limitations to be aware of. We're actively working to improve these areas, but we want to be transparent so you can plan accordingly.
 
-For a detailed comparison of PeerLab with other peering platforms like PEERING, see our [platforms comparison](/docs/reference/comparison/) section.
+For a detailed comparison of PeerLab with other peering platforms like PEERING, see our [platforms comparison](/docs/reference/comparison/#peering-platform-comparison) section.
 
 ### IPv6-Only Prefixes
 

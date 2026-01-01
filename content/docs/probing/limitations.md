@@ -5,13 +5,16 @@ previous: /docs/probing/security-compliance/
 next: /docs/datasets
 ---
 
-While nxthdr provides a powerful and flexible platform for active Internet measurements, there are some current limitations to be aware of when designing your experiments. We’re actively working to improve these areas, but we want to be transparent so you can plan accordingly.
+While nxthdr provides a powerful and flexible probing platform for active Internet measurements, there are some current limitations to be aware of when designing your experiments. We’re actively working to improve these areas, but we want to be transparent so you can plan accordingly.
+
+For a detailed comparison of Saimiris with other probing platforms like RIPE Atlas or CAIDA Ark, see our [platforms comparison](/docs/reference/comparison/#probing-platform-comparison) section.
+
 
 ### Single Source AS
 
 All probes are currently sent from our own Autonomous System: AS215011. **This is by design**. It helps maintain control over routing behavior during experiments.
 
-We do *not* aim to compete with large-scale platforms like RIPE Atlas, which support probes from thousands of ASes. Instead, nxthdr focuses on offering controlled, customizable measurement capabilities. See the [platforms comparison](/docs/reference/comparison/) for more information.
+We do *not* aim to compete with large-scale platforms like RIPE Atlas, which support probes from thousands of ASes. Instead, nxthdr focuses on offering controlled, customizable measurement capabilities.
 
 ### IPv6-Only Measurements
 

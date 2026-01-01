@@ -43,7 +43,7 @@ This section compares PeerLab with the PEERING testbed, the leading platform for
 
 ### BGP Experimentation Capabilities
 
-| Feature                               | PEERING Testbed                                   | nxthdr (PeerLab)                                     |
+| Feature                               | PEERING Testbed                                   | nxthdr                                      |
 | ------------------------------------- | ------------------------------------------- | ----------------------------------------- |
 | **Access requirements**     | Application required; academic use only                | Open signup, no approval needed    |
 | **Prefix allocation**       |  Prefix pool or bring your own       | Prefix pool as a service or bring your own                             |
