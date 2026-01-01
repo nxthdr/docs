@@ -9,7 +9,7 @@ This is a strong and thoughtful section that communicates your values and polici
 
 In short, nxthdr is an open platform for Internet measurement research, with a focus on active measurements, passive BGP data collection, and network analysis tooling. It’s designed to be accessible to everyone, with no restrictions on data access or usage.
 
-All data collected is released into the public domain, and all tools and systems are open source.
+All data collected is released into the public domain ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/)), and all tools and systems are open source.
 
 ### How Can I Help?
 

@@ -17,7 +17,7 @@ The nxthdr platforms are designed for research, education, and legitimate networ
 
 **Data Collection and Privacy**
 
-All data generated through the platforms (BGP announcements, measurement results) is made publicly available under the Public Domain Dedication and License. Do not use the platforms if you require private or confidential measurements. See our [privacy policy](/docs/reference/privacy/) for details.
+All data generated through the platforms (BGP announcements, measurement results) is made publicly available under the Public Domain Dedication and License ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/)). Do not use the platforms if you require private or confidential measurements. See our [privacy policy](/docs/reference/privacy/) for details.
 
 **Fair Use**
 

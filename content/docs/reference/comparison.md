@@ -43,7 +43,7 @@ This section compares PeerLab with the PEERING testbed, the leading platform for
 
 ### BGP Experimentation Capabilities
 
-| Feature                               | PEERING Testbed                                   | nxthdr                                      |
+| Feature                               | PEERING Testbed                                   | nxthdr (PeerLab)                                     |
 | ------------------------------------- | ------------------------------------------- | ----------------------------------------- |
 | **Access requirements**     | Application required; academic use only                | Open signup, no approval needed    |
 | **Prefix allocation**       |  Prefix pool or bring your own       | Prefix pool as a service or bring your own                             |
@@ -77,7 +77,7 @@ This section compares PeerLab with the PEERING testbed, the leading platform for
 
 ### User-Defined Measurements
 
-| Feature                               | CAIDA Ark                                   | RIPE Atlas                             | NLNOG Ring                                     | nxthdr                                    |
+| Feature                               | CAIDA Ark                                   | RIPE Atlas                             | NLNOG Ring                                     | nxthdr (Saimiris)                                   |
 | ------------------------------------- | ------------------------------------------- | -------------------------------------- | ---------------------------------------------- | ----------------------------------------- |
 | **Access requirements**     | Limited to vetted researchers                | Open with daily quotas       | Requires participation (host a node)                             | Open signup, no approval needed    |
 | **Daily quotas**       | N/A (vetted access)       | ~100k results/day       | No enforced quotas                             | 10k results/day (currently) |
@@ -86,18 +86,7 @@ This section compares PeerLab with the PEERING testbed, the leading platform for
 | **Source ASes**                    | ~200                                       | ~4,000                          | ~547                                           | 1 (AS215011)   |
 | **IPv4 / IPv6 support**               | Both                                         | Both                                    | Both                                            | IPv6 only (currently)           |
 | **Anycast measurement support**       | No                                          | No                                     | No                                             | Yes  |
-| **BGP experiments**       | No                                          | No                                     | No                                             | Yes (via PeerLab)  |
-
-
-### Datasets
-
-| Feature                          | CAIDA Ark                                  | RIPE Atlas                              | M‑Lab                                       | nxthdr                              |
-| -------------------------------- | ------------------------------------------ | --------------------------------------- | ------------------------------------------- | ----------------------------------- |
-| **Data access** | Public datasets; raw data requires request; delayed availability | Public API; private data with auth      | Public via BigQuery (requires GCP account)   | Direct ClickHouse access, no authentication |
-| **Data licensing**               | Academic, non-commercial use only              | Open access under RIPE NCC terms        | Public domain (CC0)   | Public domain ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/)) |
-| **Data retention**               | Long-term archives; curated datasets       | Private data ~1 month; public archives | Indefinite retention; 24h publication delay | 7 days (rolling window) |
-| **BGP data**               | Yes (RouteViews, BGPStream)       | Limited | No | Yes (full BGP feeds from AS215011) |
-| **Traffic data**               | No       | No | Yes (NDT, speedtest) | Yes (sFlow from AS215011) |
+| **BGP joint experiments**       | No                                          | No                                     | No                                             | Yes (via PeerLab and Saimiris)  |
 
 ### Measurement Framework Comparison
 
@@ -145,6 +134,16 @@ PKTLAB is a measurement framework (not a platform) that can be compared with Sai
 * Full control over probe parameters and source addressing
 * Truly open data with no authentication or licensing restrictions ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/))
 * All measurement data publicly available
+
+## Datasets
+
+| Feature                          | CAIDA Ark                                  | RIPE Atlas                              | M‑Lab                                       | nxthdr                              |
+| -------------------------------- | ------------------------------------------ | --------------------------------------- | ------------------------------------------- | ----------------------------------- |
+| **Data access** | Public datasets; raw data requires request; delayed availability | Public API; private data with auth      | Public via BigQuery (requires GCP account)   | Direct ClickHouse access, no authentication |
+| **Data licensing**               | Academic, non-commercial use only              | Open access under RIPE NCC terms        | Public domain (CC0)   | Public domain ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/)) |
+| **Data retention**               | Long-term archives; curated datasets       | Private data ~1 month; public archives | Indefinite retention; 24h publication delay | 7 days (rolling window) |
+| **BGP data**               | Yes (RouteViews, BGPStream)       | Limited | No | Yes (full BGP feeds from AS215011) |
+| **Traffic data**               | No       | No | Yes (NDT, speedtest) | Yes (sFlow from AS215011) |
 
 ## Sources
 

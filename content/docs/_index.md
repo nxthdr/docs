@@ -6,7 +6,7 @@ next: /docs/peering/
 
 [nxthdr](https://nxthdr.dev) operates a global network infrastructure designed specifically for Internet research and education. Our platform offers flexible worldwide active measurements from our own autonomous system and peering capabilities through multiple Internet exchanges.
 
-All datasets are shared in the public domain, every tool and systems are open source, and the entire infrastructure is designed rapid experimentation and reproducibility.
+All datasets are shared in the public domain ([PDDL](https://opendatacommons.org/licenses/pddl/1-0/)), every tool and systems are open source, and the entire infrastructure is designed rapid experimentation and reproducibility.
 
 If you find something missing in the documentation, please open an  [issue](https://github.com/nxthdr/docs/issues) or [contact us](/docs/reference/contact).
 
