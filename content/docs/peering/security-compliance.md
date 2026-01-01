@@ -34,16 +34,9 @@ We implement comprehensive monitoring to ensure compliance with security require
 
 * BGP/BMP announcements and traffic utilization (sFlow) are monitored and made public through our datasets (see [datasets section](/docs/datasets/))
 * Abuse [contact](/docs/reference/contact/) monitoring to handle complaints
-* All monitoring data is auditable by anyone
-
-This public monitoring enables:
-
-* Verification that users only announce their leased prefixes
-* Detection of unauthorized route announcements
-* Transparency in network traffic patterns
-* Community oversight of PeerLab operations
 
 **Future Enhancements**
 
-* Automated daily IP reputation checks to detect if user prefixes appear on public blocklists
+* Automated daily IP reputation checks to detect if peering prefixes appear on public blocklists
 * Traffic anomaly detection to alert on unusual patterns such as sudden spikes or port scanning activity
+* Automated detection of suspicious routing behavior and potential prefix hijacking attempts

@@ -17,16 +17,15 @@ Key requirements include:
 
 ## Monitoring
 
-We implement comprehensive monitoring to ensure responsible use of the Saimiris measurement platform:
+We implement comprehensive monitoring to ensure compliance with security requirements and provide transparency:
 
 **Current Monitoring**
 
-* All probes sent through the platform are logged and monitored
-* Measurement results are publicly available and auditable by anyone
+* Measurement results are made public through our datasets (see [datasets section](/docs/datasets/))
+* Abuse [contact](/docs/reference/contact/) monitoring to handle complaints
 
 **Future Enhancements**
 
+* Automated daily IP reputation checks to detect if peering prefixes appear on public blocklists
 * Per user probe statistics to track usage patterns and detect anomalies
 * Target blocklist filtering to prevent probes from reaching blocked destinations, regardless of TTL value
-
-This monitoring framework helps us identify and prevent abuse while maintaining transparency in our measurement operations.
