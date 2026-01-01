@@ -17,7 +17,7 @@ We do *not* aim to compete with large-scale platforms like RIPE Atlas, which sup
 
 At this time, nxthdr only supports IPv6-based measurements. This is because our Autonomous System ([AS215011](https://www.peeringdb.com/net/36080)) only announces IPv6 prefixes for now.
 
-We plan to support IPv4 in the future by leveraging cloud providers’ IPv4 space. If you'd like to contribute public IPv4 prefixes or infrastructure, please [contact us](/docs/reference/contact).
+If you'd like to contribute public IPv4 prefixes or infrastructure, please [contact us](/docs/reference/contact).
 
 ### Limited Probing Locations
 

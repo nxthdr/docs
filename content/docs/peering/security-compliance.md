@@ -2,7 +2,7 @@
 title: Security & Compliance
 weight: 3
 prev: /docs/peering/getting-started/
-next: /docs/probing/
+next: /docs/peering/limitations/
 ---
 
 When using PeerLab, you must follow these security requirements. For complete details, see our [terms of service](/docs/reference/terms/).
