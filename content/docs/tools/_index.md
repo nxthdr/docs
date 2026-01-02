@@ -5,4 +5,4 @@ prev: /docs/datasets/guidelines/
 next: /docs/tools/python/
 ---
 
-Until now, we have described different features of **nxthdr**, such as conducting active measurements with Saimiris, running BGP experiments with PeerLab, and accessing datasets. In this section, we will explore the tools to ease the collection, analysis, and visualization of data.
+This section covers the tools available to interact with **nxthdr** platform, from command line interfaces to Python libraries and interactive notebooks. These tools simplify working with peering and peering platforms and exploring datasets.

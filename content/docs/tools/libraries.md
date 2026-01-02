@@ -1,7 +1,6 @@
 ---
-title: Python Libraries
-weight: 1
-prev: /docs/tools/
+title: Libraries
+weight: 2
 ---
 
 ### Probes Generation

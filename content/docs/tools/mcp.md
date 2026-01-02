@@ -1,6 +1,6 @@
 ---
 title: MCP Servers
-weight: 3
+weight: 4
 next: /docs/internals/
 ---
 
