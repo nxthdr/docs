@@ -104,14 +104,63 @@ After a few moments, you should see BGP sessions in "Established" state.
 
 ## Monitor Your Announcements
 
-*Content coming soon...*
+You can verify that your BGP announcements are being received by querying our ClickHouse database, which stores all BGP updates collected via BMP (BGP Monitoring Protocol).
+
+### Check All Your Announcements
+
+To see all announcements received from your ASN (using ASN `65000` as an example):
+
+```sh
+curl -X POST "https://nxthdr.dev/api/query/" \
+  -u "read:read" \
+  -H "Content-Type: text/plain" \
+  -d "SELECT
+    time_received_ns,
+    peer_addr,
+    peer_asn,
+    prefix_addr,
+    prefix_len,
+    announced,
+    as_path,
+    next_hop,
+    origin,
+FROM bmp.updates
+WHERE peer_asn = 65000
+ORDER BY time_received_ns DESC
+LIMIT 100 FORMAT CSVWithNames"
+```
+
+Replace `65000` with your assigned ASN.
+
+### Check a Specific Prefix
+
+To verify a specific prefix announcement (using `2a06:de00:5b::` as an example):
+
+```sh
+curl -X POST "https://nxthdr.dev/api/query/" \
+  -u "read:read" \
+  -H "Content-Type: text/plain" \
+  -d "SELECT
+    time_received_ns,
+    peer_addr,
+    peer_asn,
+    prefix_addr,
+    prefix_len,
+    announced,
+    as_path,
+    next_hop,
+    origin
+FROM bmp.updates
+WHERE peer_asn = 65000
+  AND prefix_addr = toIPv6('2a06:de00:5b::')
+  AND prefix_len = 48
+ORDER BY time_received_ns DESC
+LIMIT 100 FORMAT CSVWithNames"
+```
+
+Replace the prefix address `2a06:de00:5b::` with your leased prefix.
 
 ## Get Help
 
-If you encounter issues or have questions:
-
-* Check our [contact page](/docs/reference/contact/) for support options
-* Join our [Discord community](https://discord.gg/KF3RSKXrSp)
-* Email us at [admin@nxthdr.dev](mailto:admin@nxthdr.dev)
-
+If you encounter issues or have questions, feel free to [contact us](/docs/reference/contact/).
 The peering platform is actively evolving. We welcome feedback and suggestions for improving the user experience.
