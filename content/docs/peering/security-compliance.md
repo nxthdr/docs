@@ -9,7 +9,7 @@ When using PeerLab, you must follow these security requirements. For complete de
 
 **Route Announcements**
 
-You can only announce IPv6 prefixes that have been explicitly leased to you through the [nxthdr.dev dashboard](https://nxthdr.dev/peering). Attempting to announce unauthorized prefixes will result in your announcements being filtered and your access being potentially suspended.
+You can only announce IPv6 prefixes that have been explicitly leased to you through the nxthdr.dev [dashboard](https://nxthdr.dev/peering). Attempting to announce unauthorized prefixes will result in your announcements being filtered and your access being potentially suspended.
 
 **ASN Assignment**
 
