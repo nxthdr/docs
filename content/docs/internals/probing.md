@@ -1,8 +1,8 @@
 ---
 title: Probing Platform
-weight: 4
+weight: 3
 prev: /docs/internals/peering/
-next: /docs/internals/observability
+next: /docs/internals/pipeline
 ---
 
 Saimiris is an internet-scale active measurements pipeline that enables distributed network probing from multiple vantage points. The platform performs traceroute and ping measurements to analyze Internet paths, latency, and topology.

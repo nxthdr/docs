@@ -1,8 +1,8 @@
 ---
 title: Data Pipelines
-weight: 2
-prev: /docs/internals/infrastructure/
-next: /docs/internals/storage
+weight: 4
+prev: /docs/internals/probing/
+next: /docs/internals/observability
 ---
 
 The nxthdr platform processes network telemetry data through two main pipelines: BGP routing updates and network flow data. Both pipelines follow a similar architecture pattern, collecting data from network devices, streaming it through Kafka, and storing it in ClickHouse for analysis.

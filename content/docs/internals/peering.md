@@ -1,7 +1,7 @@
 ---
 title: Peering Platform
-weight: 3
-prev: /docs/internals/pipeline/
+weight: 2
+prev: /docs/internals/infrastructure/
 next: /docs/internals/probing
 ---
 
