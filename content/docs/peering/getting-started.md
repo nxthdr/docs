@@ -19,8 +19,9 @@ You do not need your own Autonomous System Number (ASN). We will assign you a pr
 
 ## Step 1: Lease IPv6 Prefixes
 
-1. Navigate to the [peering dashboard](https://nxthdr.dev/peering)
-2. Request /48 IPv6 prefix allocation
+1. [Sign in](https://nxthdr.dev) to your nxthdr.dev account
+2. Navigate to the [peering dashboard](https://nxthdr.dev/peering)
+3. Request /48 IPv6 prefix allocation
 
 Your leased prefixes will be displayed on the dashboard and ready to announce.
 
@@ -159,6 +160,16 @@ LIMIT 100 FORMAT CSVWithNames"
 ```
 
 Replace the prefix address `2a06:de00:5b::` with your leased prefix.
+
+## Update BIRD Configuration
+
+If you need to modify the BIRD configuration directly:
+
+1. Edit the configuration files in the `workspace/` directory
+2. Reload BIRD without restarting the stack:
+   ```bash
+   make bird-config
+   ```
 
 ## Get Help
 
