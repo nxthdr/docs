@@ -1,6 +1,6 @@
 ---
 title: Notebooks
-weight: 3
+weight: 2
 ---
 
 *Content coming soon...*
