@@ -1,8 +1,8 @@
 ---
 title: Network Infrastructure
-weight: 1
-prev: /docs/peering/
-next: /docs/peering/getting-started/
+weight: 2
+prev: /docs/peering/getting-started/
+next: /docs/peering/security-compliance/
 ---
 
 We operate [AS215011](https://www.peeringdb.com/net/36080), an IPv6-only research-focused Autonomous System used to support routing and peering experiments, and to power the active measurement infrastructure behind **nxthdr**.

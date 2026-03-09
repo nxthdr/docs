@@ -2,7 +2,7 @@
 title: Peering Platform
 weight: 1
 prev: /docs/
-next: /docs/peering/infrastructure/
+next: /docs/peering/getting-started/
 ---
 
 **PeerLab** is the nxthdr peering platform that enables researchers, students, and network operators to conduct real-world BGP and routing experiments using production Internet infrastructure.

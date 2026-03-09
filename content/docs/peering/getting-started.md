@@ -1,8 +1,8 @@
 ---
 title: Getting Started
-weight: 2
-prev: /docs/peering/infrastructure/
-next: /docs/peering/security-compliance/
+weight: 1
+prev: /docs/peering/
+next: /docs/peering/infrastructure/
 ---
 
 This guide will help you start using the PeerLab peering platform to conduct BGP and routing experiments.
