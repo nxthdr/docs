@@ -5,7 +5,7 @@ layout: hextra-home
 
 <div class="hx:mt-6 hx:mb-4">
 {{< hextra/hero-headline >}}
-  A Wide-Open Window to the Internet
+  Open Infrastructure for Internet Experimentation
 {{< /hextra/hero-headline >}}
 </div>
 
