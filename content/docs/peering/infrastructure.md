@@ -1,7 +1,7 @@
 ---
 title: Network Infrastructure
-weight: 2
-prev: /docs/peering/getting-started/
+weight: 4
+prev: /docs/peering/bgp-data-feedback/
 next: /docs/peering/security-compliance/
 ---
 

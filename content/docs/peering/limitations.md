@@ -1,6 +1,6 @@
 ---
 title: Limitations
-weight: 4
+weight: 6
 prev: /docs/peering/security-compliance/
 next: /docs/probing/
 ---

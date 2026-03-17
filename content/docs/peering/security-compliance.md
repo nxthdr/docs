@@ -1,6 +1,6 @@
 ---
 title: Security & Compliance
-weight: 3
+weight: 5
 prev: /docs/peering/infrastructure/
 next: /docs/peering/limitations/
 ---

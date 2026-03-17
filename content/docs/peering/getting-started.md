@@ -2,7 +2,7 @@
 title: Getting Started
 weight: 1
 prev: /docs/peering/
-next: /docs/peering/infrastructure/
+next: /docs/peering/routing-configurations/
 ---
 
 This guide will help you start using the PeerLab peering platform to conduct BGP and routing experiments.
@@ -103,73 +103,12 @@ make status
 
 After a few moments, you should see BGP sessions in "Established" state.
 
-## Monitor Your Announcements
+## Next Steps
 
-You can verify that your BGP announcements are being received by querying our ClickHouse database, which stores all BGP updates collected via BMP (BGP Monitoring Protocol).
+Once your BGP sessions are established, you can:
 
-### Check All Your Announcements
-
-To see all announcements received from your ASN (using ASN `65000` as an example):
-
-```sh
-curl -X POST "https://nxthdr.dev/api/query/" \
-  -u "read:read" \
-  -H "Content-Type: text/plain" \
-  -d "SELECT
-    time_received_ns,
-    peer_addr,
-    peer_asn,
-    prefix_addr,
-    prefix_len,
-    announced,
-    as_path,
-    next_hop,
-    origin,
-FROM bmp.updates
-WHERE peer_asn = 65000
-ORDER BY time_received_ns DESC
-LIMIT 100 FORMAT CSVWithNames"
-```
-
-Replace `65000` with your assigned ASN.
-
-### Check a Specific Prefix
-
-To verify a specific prefix announcement (using `2a06:de00:5b::` as an example):
-
-```sh
-curl -X POST "https://nxthdr.dev/api/query/" \
-  -u "read:read" \
-  -H "Content-Type: text/plain" \
-  -d "SELECT
-    time_received_ns,
-    peer_addr,
-    peer_asn,
-    prefix_addr,
-    prefix_len,
-    announced,
-    as_path,
-    next_hop,
-    origin
-FROM bmp.updates
-WHERE peer_asn = 65000
-  AND prefix_addr = toIPv6('2a06:de00:5b::')
-  AND prefix_len = 48
-ORDER BY time_received_ns DESC
-LIMIT 100 FORMAT CSVWithNames"
-```
-
-Replace the prefix address `2a06:de00:5b::` with your leased prefix.
-
-## Update BIRD Configuration
-
-If you need to modify the BIRD configuration directly:
-
-1. Edit the configuration files in the `workspace/` directory
-2. Reload BIRD without restarting the stack:
-   ```bash
-   make bird-config
-   ```
+- **Customize your routing**: Configure import filters, AS path prepending, BGP communities, and selective exports. See [Routing Configurations](/docs/peering/routing-configurations/).
+- **Monitor your announcements**: Verify prefix propagation, analyze AS paths, and correlate with traffic data. See [BGP Data Feedback](/docs/peering/bgp-data-feedback/).
 
 ## Get Help
 

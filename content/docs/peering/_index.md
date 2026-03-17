@@ -9,11 +9,11 @@ next: /docs/peering/getting-started/
 
 ## Platform Status
 
-PeerLab is currently **experimental**. Core functionality is operational, but we are refining the user experience and documentation.
+PeerLab is currently in **alpha**. Core functionality is operational, and documentation covers all features and workflows from the lease process to advanced routing configurations and BGP data feedback usage.
 
-**Experimental Exit Criteria**
+**Alpha Exit Criteria**
 
-Achieve a complete documentation for the user experience that covers all features and workflows, from the lease process to advanced routing configurations and BGP data feedback usage.
+To be defined.
 
 If you are interested in being an early adopter of PeerLab, please [sign up](https://nxthdr.dev) and access the [peering dashboard](https://nxthdr.dev/peering) to get started. Don't forget to give us your feedback and suggestions (see [contact](/docs/reference/contact/)).
 
