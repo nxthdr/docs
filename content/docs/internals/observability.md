@@ -134,7 +134,7 @@ Runs as a Docker container on all servers, scraped by local Alloy instance.
 **Configuration**:
 - Grouping: Alerts grouped by name and job
 - Deduplication: Prevents duplicate notifications
-- Routing: All alerts sent to Discord webhook
+- Routing: All alerts sent to Matrix via Hookshot webhook
 - Repeat interval: 3 hours for ongoing alerts
 
 **Alert Rules**:
@@ -145,8 +145,8 @@ Prometheus evaluates alert rules defined in `alerts.yml`:
 - **Network issues**: BGP session failures, high packet loss
 
 **Notification Channels**:
-- Discord webhook for real-time alerts
-- Future: Email, PagerDuty, Slack integration
+- Matrix room via Hookshot webhook bridge for real-time alerts
+- Future: Email, PagerDuty integration
 
 ### Upptime
 

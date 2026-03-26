@@ -26,11 +26,11 @@ theme = "hextra"
     icon = "github"
 
 [[menu.main]]
-  name = "Discord"
+  name = "Chat"
   weight = 3
-  url = "https://discord.gg/KF3RSKXrSp"
+  url = "https://chat.nxthdr.dev"
   [menu.main.params]
-    icon = "discord"
+    icon = "chat"
 
 [params]
   [params.navbar]
