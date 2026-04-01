@@ -221,6 +221,7 @@ PeerLab provides Makefile shortcuts for common BIRD operations:
 | `make bird-exports` | Show exported routes per peer |
 | `make bird-prefixes` | Show configured user prefixes |
 | `make bird-config` | Reload BIRD configuration |
+| `make ris-visibility` | Check prefix visibility on RIPE RIS route collectors |
 
 For more advanced queries, you can exec into the BIRD container:
 
