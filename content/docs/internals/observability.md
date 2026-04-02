@@ -148,6 +148,26 @@ Prometheus evaluates alert rules defined in `alerts.yml`:
 - Matrix room via Hookshot webhook bridge for real-time alerts
 - Future: Email, PagerDuty integration
 
+### BGPAlerter
+
+[BGPAlerter](https://github.com/nttgin/BGPalerter) monitors BGP routing for nxthdr prefixes in real-time via the RIPE RIS Live stream. It detects routing anomalies such as prefix hijacks, visibility loss, unauthorized path changes, and RPKI/ROA issues.
+
+**Monitored Prefixes**:
+- `2a06:de00:50::/48` — Core infrastructure
+- `2a06:de00:5b::/48`, `2a06:de00:5c::/48` — PeerLab
+- `2a0e:97c0:8a0::/48` – `2a0e:97c0:8af::/48` — Probing (Saimiris)
+
+**Detection Capabilities**:
+- **Hijack detection**: Alerts when a prefix is originated by an unauthorized ASN
+- **Visibility loss**: Alerts when a prefix is withdrawn from the global routing table
+- **Path monitoring**: Detects unexpected AS path changes
+- **RPKI monitoring**: Tracks ROA expiration and validation status
+
+**Architecture**:
+- Connects to RIPE RIS Live WebSocket feed with `carefulSubscription` (filtered to monitored prefixes only)
+- Sends alerts to the Matrix #Alerts room via Hookshot webhook, alongside Alertmanager notifications
+- Runs as a Docker container on the core server
+
 ### Upptime
 
 [Upptime](https://upptime.js.org/) provides HTTP endpoint monitoring with a public status page.
