@@ -38,9 +38,11 @@ The [PeerLab](https://github.com/nxthdr/peerlab) client is a Docker Compose stac
 The [PeerLab Gateway](https://github.com/nxthdr/peerlab-gateway) is a Rust-based API service that manages user resources. It provides two API surfaces:
 
 **Client API** (`/api/*`): JWT-authenticated endpoints for end users via nxthdr.dev
-- `GET /api/user/info`: Retrieve user ASN and active prefix leases
+- `GET /api/user/info`: Retrieve user ASN and active prefix leases (includes RPKI status)
 - `POST /api/user/asn`: Request ASN assignment (automatic allocation from pool)
-- `POST /api/user/prefix`: Request time-limited IPv6 /48 prefix leases
+- `POST /api/user/prefix`: Request time-limited IPv6 /48 prefix leases (auto-creates RPKI ROA)
+- `PUT /api/user/prefix/{prefix}/rpki`: Enable or disable RPKI ROA for a leased prefix
+- `DELETE /api/user/prefix/{prefix}`: Revoke a prefix lease (ensures ROA is restored first)
 
 **Service API** (`/service/*`): Agent-authenticated endpoints for infrastructure services
 - `GET /service/mappings`: Retrieve all user-to-ASN-to-prefix mappings with email addresses
@@ -123,6 +125,23 @@ The `enforce_user_asn_and_prefix` filter validates incoming BGP announcements:
 ### Extended Next Hop
 
 BGP sessions use Extended Next Hop (RFC 5549), allowing IPv6 routes to be exchanged over IPv4 BGP sessions. This simplifies connectivity since Tailscale provides IPv4 addresses.
+
+## RPKI ROA Management
+
+The platform integrates with [Securebit](https://www.securebit.cloud/) to manage RPKI ROAs for leased prefixes. This allows user-announced prefixes to be cryptographically validated by any network performing RPKI Origin Validation.
+
+### Automatic Lifecycle
+
+- **On prefix lease**: A ROA is automatically created in Securebit, authorizing the nxthdr origin ASN (AS215011) to announce the /48 prefix.
+- **On prefix revoke**: The platform ensures the ROA is re-enabled before releasing the prefix, maintaining routing stability.
+
+### User Control
+
+Users can toggle RPKI for each leased prefix via the web interface or CLI (`nxthdr peering prefix rpki enable|disable <PREFIX>`). Securebit is the source of truth for ROA state; the platform queries it directly (with a 5-minute cache) rather than storing RPKI state in the database.
+
+### IXP-Side Validation
+
+IXP servers perform RPKI validation using the Cloudflare RTR validator (`rtr.rpki.cloudflare.com:8282`) and filter invalid routes. The RPKI cache is refreshed every 900 seconds.
 
 ## User Workflow
 

@@ -97,6 +97,28 @@ Revoke an existing prefix lease:
 nxthdr peering prefix revoke 2a06:de00:5b::/48
 ```
 
+### RPKI ROA management
+
+When you lease a prefix, an RPKI ROA (Route Origin Authorization) is automatically created. You can toggle it on or off for each leased prefix.
+
+Enable RPKI for a prefix:
+
+```bash
+nxthdr peering prefix rpki enable 2a06:de00:5b::/48
+```
+
+Disable RPKI for a prefix:
+
+```bash
+nxthdr peering prefix rpki disable 2a06:de00:5b::/48
+```
+
+The `prefix list` command also shows the current RPKI status for each lease.
+
+{{< callout type="info" >}}
+RPKI must be re-enabled before revoking a prefix. The platform enforces this for routing stability.
+{{< /callout >}}
+
 ### PeerLab environment
 
 Generate a `.env` file for PeerLab with your ASN and active prefixes:
