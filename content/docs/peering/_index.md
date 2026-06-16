@@ -13,7 +13,13 @@ PeerLab is currently in **alpha**. Core functionality is operational, and docume
 
 **Alpha Exit Criteria**
 
-To be defined.
+Before PeerLab exits alpha, we want every BGP session to be a safe, well-behaved IXP participant:
+
+- **BGP discipline** — enforce max-prefix / import limits, announcement rate-limiting (MRAI, aligned with the common norm of <= 10 announcements per hour), and route-flap damping on all sessions.
+- **RPKI enforcement** — inline ROV (`roa_check`) on routes imported from the IXP.
+- **Reload safety** — validate generated BIRD configuration before applying it.
+
+Origin-ASN and leased-prefix ownership filtering, and per-lease RPKI ROA management, are already in place.
 
 If you are interested in being an early adopter of PeerLab, please [sign up](https://nxthdr.dev) and access the [peering dashboard](https://nxthdr.dev/peering) to get started. Don't forget to give us your feedback and suggestions (see [contact](/docs/reference/contact/)).
 

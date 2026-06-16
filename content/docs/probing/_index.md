@@ -15,7 +15,13 @@ Saimiris is currently in **alpha**. Core functionality is operational and availa
 
 **Alpha Exit Criteria**
 
-Deploy additional probing servers in more geographic locations (objective: >= 10 servers worldwide).
+Before Saimiris exits alpha, we want the platform to be safe to operate unsupervised and at scale:
+
+- **Abuse controls** — destination blocklist filtering (reject probes to blocked targets regardless of TTL), and a maintenance / kill-switch to pause probing during incidents.
+- **User management** — admin endpoints to view and set per-user probe limits, with proper authorization.
+- **Scale** — deploy additional probing servers in more geographic locations (objective: >= 10 servers worldwide).
+
+Per-user quotas, usage statistics, and source-address validation are already in place.
 
 If you need specific vantage points or have capacity requirements, please [contact us](/docs/reference/contact/).
 
