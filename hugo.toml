@@ -11,6 +11,12 @@ theme = "hextra"
   [markup.highlight]
     noClasses = false
 
+# LLM-friendly output (hextra >= 0.12): /llms.txt index + per-page raw markdown.
+[outputs]
+  home = ["HTML", "RSS", "llms"]
+  section = ["HTML", "RSS", "markdown"]
+  page = ["HTML", "markdown"]
+
 
 [[menu.main]]
   name = "Search"
