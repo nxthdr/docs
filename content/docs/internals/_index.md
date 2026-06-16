@@ -1,7 +1,7 @@
 ---
 title: Internals
 weight: 6
-prev: /docs/tools/mcp/
+prev: /docs/tools/llms/
 next: /docs/internals/infrastructure/
 ---
 
