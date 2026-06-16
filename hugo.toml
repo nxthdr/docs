@@ -39,6 +39,8 @@ theme = "hextra"
     icon = "chat"
 
 [params]
+  description = "Open Infrastructure for Internet Experimentation"
+
   [params.navbar]
     displayTitle = true
     displayLogo = false
