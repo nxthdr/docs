@@ -210,10 +210,6 @@ nxthdr peering prefix rpki disable 2a06:de00:5b::/48
 
 The `prefix list` command also shows the current RPKI status for each lease.
 
-{{< callout type="info" >}}
-RPKI must be re-enabled before revoking a prefix. The platform enforces this for routing stability.
-{{< /callout >}}
-
 ### PeerLab environment
 
 Generate a `.env` file for PeerLab with your ASN and active prefixes:
