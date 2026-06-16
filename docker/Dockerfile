@@ -1,9 +1,9 @@
 FROM debian:bookworm-slim AS build
 
-# Pin Hugo (extended). apk's `hugo` floats: it reached 0.160, which removed the
-# .Site.Author field still referenced by the hextra theme's RSS template, breaking
-# every build. Pin to a known-good version until the theme is bumped.
-ARG HUGO_VERSION=0.155.0
+# Pin Hugo (extended) for reproducible builds — apk's `hugo` floats and previously
+# broke the site when it bumped past a theme-incompatible release. Keep this at/above
+# the hextra theme's min_version (see themes/hextra/theme.toml).
+ARG HUGO_VERSION=0.163.2
 ARG TARGETARCH
 RUN apt-get update \
     && apt-get install -y --no-install-recommends curl ca-certificates \
