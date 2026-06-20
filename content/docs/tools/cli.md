@@ -23,7 +23,7 @@ All commands that interact with the platform require authentication. The CLI use
 ### Login
 
 ```bash
-nxthdr login
+nxthdr auth login
 ```
 
 This will display a URL and a code. Open the URL in your browser and enter the code to authenticate. Tokens are stored locally and refreshed automatically when expired.
@@ -31,7 +31,7 @@ This will display a URL and a code. Open the URL in your browser and enter the c
 ### Logout
 
 ```bash
-nxthdr logout
+nxthdr auth logout
 ```
 
 Removes stored tokens from your system.
@@ -39,7 +39,7 @@ Removes stored tokens from your system.
 ### Status
 
 ```bash
-nxthdr status
+nxthdr auth status
 ```
 
 Displays your current authentication state and token expiration time.
@@ -69,7 +69,7 @@ vltcdg01  healthy  2a0e:97c0:8a0::/48 (anycast), 2a0e:97c0:8a4::/48 (unicast)
 ### Credits
 
 ```bash
-nxthdr probing credits
+nxthdr probing credits get
 ```
 
 Displays your daily probing credits usage. Each probe you send consumes one credit. The daily limit resets at midnight UTC.
@@ -266,6 +266,20 @@ nxthdr peering prefix rpki disable 2a06:de00:5b::/48
 ```
 
 The `prefix list` command also shows the current RPKI status for each lease.
+
+### Routes (BGP visibility)
+
+Check how prefixes are seen by public BGP collectors (RIPE RIS). List the visibility of your own leased prefixes:
+
+```bash
+nxthdr peering route list
+```
+
+Or look up any prefix, looking-glass style:
+
+```bash
+nxthdr peering route lookup 2a06:de00:5b::/48
+```
 
 ### PeerLab environment
 
