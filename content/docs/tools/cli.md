@@ -48,24 +48,6 @@ Displays your current authentication state and token expiration time.
 
 Commands to interact with the probing platform (Saimiris).
 
-### Credits
-
-```bash
-nxthdr probing credits
-```
-
-Displays your daily probing credits usage. Each probe you send consumes one credit. The daily limit resets at midnight UTC.
-
-Example output:
-
-```
-credits
-───────
-used       0
-limit      1000000
-remaining  1000000
-```
-
 ### Agents
 
 ```bash
@@ -82,6 +64,24 @@ id        status   prefixes
 vltewr01  healthy  2a0e:97c0:8a0::/48 (anycast), 2a0e:97c0:8a3::/48 (unicast)
 vltsgp01  healthy  2a0e:97c0:8a0::/48 (anycast), 2a0e:97c0:8a5::/48 (unicast)
 vltcdg01  healthy  2a0e:97c0:8a0::/48 (anycast), 2a0e:97c0:8a4::/48 (unicast)
+```
+
+### Credits
+
+```bash
+nxthdr probing credits
+```
+
+Displays your daily probing credits usage. Each probe you send consumes one credit. The daily limit resets at midnight UTC.
+
+Example output:
+
+```
+credits
+───────
+used       0
+limit      1000000
+remaining  1000000
 ```
 
 ### Send
@@ -104,16 +104,53 @@ id        d80d7ecf-d60b-42af-bd22-2f9937e44a7f
 probes    1 × 1 agent
 vltcdg01  2a0e:97c0:8a0:1865:ceb8:372d:d58:fe47
 
-→ nxthdr probing measurement-status d80d7ecf-d60b-42af-bd22-2f9937e44a7f
+→ nxthdr probing measurement status d80d7ecf-d60b-42af-bd22-2f9937e44a7f
 → nxthdr probing results --src-ip 2a0e:97c0:8a0:1865:ceb8:372d:d58:fe47
 ```
 
 The output includes the measurement ID and the source IP used by each agent — both needed to retrieve results.
 
-### Measurement status
+### Measurements
 
 ```bash
-nxthdr probing measurement-status <id>
+nxthdr probing measurements [--limit <n>] [--status <s>] [--since <t>] [--until <t>] [--agent <id>] [--sort started|updated] [--reverse]
+```
+
+Lists your recent measurements, so the ID from `send` isn't the only handle. All filters are applied server-side, before the limit.
+
+Example output:
+
+```
+id                                    started                      agents  probes     status
+─────────────────────────────────────────────────────────────────────────────────────────────────
+d80d7ecf-d60b-42af-bd22-2f9937e44a7f  2026-06-16T17:58:52.571824Z  1/1     1/1        complete
+cf78cc3d-b42e-4066-865d-ef08656c6964  2026-03-22T10:59:12.022398Z  0/1     0/3000     cancelled
+```
+
+All filters are optional:
+
+| Flag | Description |
+|---|---|
+| `--limit <n>` | Maximum number to return (1–100, default 20) |
+| `--status <s>` | Comma-separated: `complete`, `in-progress`, `cancelled` |
+| `--since` / `--until` | Start-time window (e.g. `2026-03-22` or `2026-03-22 10:00:00`) |
+| `--agent <id>` | Only measurements involving that agent |
+| `--sort started\|updated` | Sort field (default `updated`) |
+| `--reverse` | Oldest first |
+
+```bash
+# cancelled measurements only, oldest first
+nxthdr probing measurements --status cancelled --sort started --reverse
+```
+
+### Measurement
+
+Single-measurement operations are grouped under `measurement`.
+
+#### Status
+
+```bash
+nxthdr probing measurement status <id>
 ```
 
 Shows the progress of a measurement by ID.
@@ -127,9 +164,29 @@ id      d80d7ecf-d60b-42af-bd22-2f9937e44a7f
 status  complete
 agents  1/1 complete
 probes  1/1 sent
-agent     probes sent/expected  complete
+agent     probes sent/expected  status
 ────────────────────────────────────────
 vltcdg01  1/1                   yes
+```
+
+A cancelled measurement shows `cancelled` as its overall status and for each cancelled agent.
+
+#### Cancel
+
+```bash
+nxthdr probing measurement cancel <id>
+```
+
+Cancels a stuck or in-progress measurement — useful when an agent dies mid-run, which would otherwise leave the measurement showing "in progress" indefinitely. The unfinished agents are marked cancelled, and the measurement then appears as `cancelled` in `measurements` and `measurement status`. The command is idempotent.
+
+Example output:
+
+```
+✓ Measurement cancelled
+id                cf78cc3d-b42e-4066-865d-ef08656c6964
+cancelled         true
+agents_cancelled  1
+message           Measurement cancelled
 ```
 
 ### Results
@@ -154,7 +211,7 @@ agent     src                                    dst                   ttl  repl
 vltcdg01  2a0e:97c0:8a0:1865:ceb8:372d:d58:fe47  2001:4860:4860::8888  16   2001:4860:4860::8888  0.00ms
 ```
 
-Use `--output json` for machine-readable output suitable for piping or scripting:
+Use `--output json` or `--output csv` for machine-readable output suitable for piping or scripting (see [Output format](#output-format)):
 
 ```bash
 nxthdr probing results --src-ip <ip> --since "..." --output json
@@ -216,6 +273,19 @@ Generate a `.env` file for PeerLab with your ASN and active prefixes:
 
 ```bash
 nxthdr peering peerlab env > .env
+```
+
+## Output format
+
+Every command supports a global `-o` / `--output` flag with three formats:
+
+- `text` (default) — human-readable tables and key/value output
+- `json` — a JSON object or array, for piping and scripting
+- `csv` — RFC-4180 CSV (header row + rows) for tabular commands
+
+```bash
+nxthdr probing measurements --status cancelled -o csv
+nxthdr probing results --src-ip <ip> -o json
 ```
 
 ## Verbosity
