@@ -51,7 +51,7 @@ Commands to interact with the probing platform (Saimiris).
 ### Agents
 
 ```bash
-nxthdr probing agents
+nxthdr probing agent list
 ```
 
 Lists available probing agents and their source prefixes.
@@ -84,16 +84,20 @@ limit      1000000
 remaining  1000000
 ```
 
-### Send
+### Measurements
+
+Measurement operations are grouped under `measurement`.
+
+#### Send
 
 ```bash
-nxthdr probing send --agent <agent-id> [file]
+nxthdr probing measurement send --agent <agent-id> [file]
 ```
 
 Sends probes from the given agent. Each probe is one line in the format `dst_addr,src_port,dst_port,ttl,protocol` (protocol is `icmpv6` or `udp`). Reads from a file or stdin if no file argument is given. Use `--agent` multiple times for multi-agent sends.
 
 ```bash
-echo '2001:4860:4860::8888,24000,33434,16,udp' | nxthdr probing send --agent vltcdg01
+echo '2001:4860:4860::8888,24000,33434,16,udp' | nxthdr probing measurement send --agent vltcdg01
 ```
 
 Example output:
@@ -104,16 +108,16 @@ id        d80d7ecf-d60b-42af-bd22-2f9937e44a7f
 probes    1 × 1 agent
 vltcdg01  2a0e:97c0:8a0:1865:ceb8:372d:d58:fe47
 
-→ nxthdr probing measurement status d80d7ecf-d60b-42af-bd22-2f9937e44a7f
-→ nxthdr probing results --src-ip 2a0e:97c0:8a0:1865:ceb8:372d:d58:fe47
+→ nxthdr probing measurement get d80d7ecf-d60b-42af-bd22-2f9937e44a7f
+→ nxthdr probing reply list --src-ip 2a0e:97c0:8a0:1865:ceb8:372d:d58:fe47
 ```
 
-The output includes the measurement ID and the source IP used by each agent — both needed to retrieve results.
+The output includes the measurement ID and the source IP used by each agent — both needed to retrieve replies.
 
-### Measurements
+#### List
 
 ```bash
-nxthdr probing measurements [--limit <n>] [--status <s>] [--since <t>] [--until <t>] [--agent <id>] [--sort started|updated] [--reverse]
+nxthdr probing measurement list [--limit <n>] [--status <s>] [--since <t>] [--until <t>] [--agent <id>] [--sort started|updated] [--reverse]
 ```
 
 Lists your recent measurements, so the ID from `send` isn't the only handle. All filters are applied server-side, before the limit.
@@ -140,17 +144,13 @@ All filters are optional:
 
 ```bash
 # cancelled measurements only, oldest first
-nxthdr probing measurements --status cancelled --sort started --reverse
+nxthdr probing measurement list --status cancelled --sort started --reverse
 ```
 
-### Measurement
-
-Single-measurement operations are grouped under `measurement`.
-
-#### Status
+#### Get
 
 ```bash
-nxthdr probing measurement status <id>
+nxthdr probing measurement get <id>
 ```
 
 Shows the progress of a measurement by ID.
@@ -177,7 +177,7 @@ A cancelled measurement shows `cancelled` as its overall status and for each can
 nxthdr probing measurement cancel <id>
 ```
 
-Cancels a stuck or in-progress measurement — useful when an agent dies mid-run, which would otherwise leave the measurement showing "in progress" indefinitely. The unfinished agents are marked cancelled, and the measurement then appears as `cancelled` in `measurements` and `measurement status`. The command is idempotent.
+Cancels a stuck or in-progress measurement — useful when an agent dies mid-run, which would otherwise leave the measurement showing "in progress" indefinitely. The unfinished agents are marked cancelled, and the measurement then appears as `cancelled` in `measurement list` and `measurement get`. The command is idempotent.
 
 Example output:
 
@@ -189,16 +189,16 @@ agents_cancelled  1
 message           Measurement cancelled
 ```
 
-### Results
+### Replies
 
 ```bash
-nxthdr probing results --src-ip <ip> [--since <timestamp>] [--until <timestamp>]
+nxthdr probing reply list --src-ip <ip> [--since <timestamp>] [--until <timestamp>]
 ```
 
-Queries probe replies from ClickHouse. `--src-ip` is the source IP returned by `send`.
+Queries probe replies from ClickHouse. `--src-ip` is the source IP returned by `measurement send`.
 
 ```bash
-nxthdr probing results \
+nxthdr probing reply list \
   --src-ip 2a0e:97c0:8a0:1865:ceb8:372d:d58:fe47 \
   --since "2026-06-16 00:00:00"
 ```
@@ -214,7 +214,7 @@ vltcdg01  2a0e:97c0:8a0:1865:ceb8:372d:d58:fe47  2001:4860:4860::8888  16   2001
 Use `--output json` or `--output csv` for machine-readable output suitable for piping or scripting (see [Output format](#output-format)):
 
 ```bash
-nxthdr probing results --src-ip <ip> --since "..." --output json
+nxthdr probing reply list --src-ip <ip> --since "..." --output json
 ```
 
 ## Peering
@@ -224,7 +224,7 @@ Commands to interact with the peering platform (PeerLab).
 ### Get your ASN
 
 ```bash
-nxthdr peering asn
+nxthdr peering asn get
 ```
 
 Displays your assigned private ASN. An ASN is automatically assigned on first use.
@@ -284,8 +284,8 @@ Every command supports a global `-o` / `--output` flag with three formats:
 - `csv` — RFC-4180 CSV (header row + rows) for tabular commands
 
 ```bash
-nxthdr probing measurements --status cancelled -o csv
-nxthdr probing results --src-ip <ip> -o json
+nxthdr probing measurement list --status cancelled -o csv
+nxthdr probing reply list --src-ip <ip> -o json
 ```
 
 ## Verbosity
