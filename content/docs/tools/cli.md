@@ -16,6 +16,23 @@ Install from [crates.io](https://crates.io/crates/nxthdr) using Cargo:
 cargo install nxthdr
 ```
 
+Check the installed version with `nxthdr --version`.
+
+## Shell completions
+
+Generate a completion script for your shell with `nxthdr completions <shell>`, then install it where your shell looks for completions. Supported shells: `bash`, `zsh`, `fish`, `elvish`, and `powershell`.
+
+```bash
+# fish
+nxthdr completions fish > ~/.config/fish/completions/nxthdr.fish
+
+# zsh — the target directory must be on your $fpath; restart the shell afterwards
+nxthdr completions zsh > ~/.zfunc/_nxthdr
+
+# bash
+nxthdr completions bash > ~/.local/share/bash-completion/completions/nxthdr
+```
+
 ## Authentication
 
 All commands that interact with the platform require authentication. The CLI uses the Auth0 device authorization flow.
